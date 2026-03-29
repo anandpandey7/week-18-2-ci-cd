@@ -1,9 +1,16 @@
-name: Build on PR
+name: Build on PR and Push
 
 on:
+  push:
+    branches:
+      - master
+      - main
+      - CI
+      - merchant-app
   pull_request:
     branches:
       - master
+      - main
 
 jobs:
   build:
